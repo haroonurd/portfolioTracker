@@ -33,3 +33,32 @@ A comprehensive Web3 application that tracks cryptocurrency portfolios across mu
 ```bash
 git clone https://github.com/yourusername/crypto-portfolio-tracker.git
 cd crypto-portfolio-tracker
+
+Install backend dependencies:
+
+cd backend
+npm install
+
+Install frontend dependencies:
+
+cd ../frontend
+npm install
+
+Set up environment variables:
+
+
+cp .env.example .env
+# Add your Infura API key and other configurations
+
+Run the application:
+
+
+# Terminal 1 - Backend
+cd backend
+npm run dev
+
+# Terminal 2 - Frontend
+cd frontend
+npm run dev
+
+
