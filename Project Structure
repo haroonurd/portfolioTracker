@@ -1,0 +1,15 @@
+crypto-portfolio-tracker/
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── backend/
+│   ├── routes/
+│   ├── services/
+│   └── package.json
+├── smart-contracts/
+│   ├── contracts/
+│   └── scripts/
+├── README.md
+├── .gitignore
+└── package.json
