@@ -1,64 +1,44 @@
-# Multi-Chain Crypto Portfolio Tracker
+# portfolioTracker
 
-A comprehensive Web3 application that tracks cryptocurrency portfolios across multiple blockchains including Ethereum, Polygon, and Binance Smart Chain.
+Multi-chain cryptocurrency portfolio tracking tool.
+
+## Overview
+Track and monitor your holdings across multiple blockchains, tokens, and wallets.
 
 ## Features
-
-- 📊 **Multi-Chain Support**: Track assets across Ethereum, Polygon, BSC
-- 💰 **Real-time Prices**: Live price data from CoinGecko API
-- 📈 **Portfolio Analytics**: Visual charts and breakdowns
-- 🔍 **Transaction History**: View recent transactions
-- 🎨 **Modern UI**: Built with React and Tailwind CSS
-
-## Tech Stack
-
-### Frontend
-- React 18
-- Tailwind CSS
-- Chart.js for analytics
-- Vite for build tooling
-
-### Backend
-- Node.js + Express
-- Web3.js & Ethers.js
-- Multi-chain RPC connections
-
-### Blockchain
-- Solidity smart contracts
-- Multi-chain compatibility
+- Fetch balances for Ethereum, BSC, Polygon, etc.
+- Multi-token portfolio tracking with value aggregation
+- Export portfolio data to CSV/JSON
+- Supports historical snapshots and trend analysis
 
 ## Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/crypto-portfolio-tracker.git
-cd crypto-portfolio-tracker
+git clone <repo-url>
+cd portfolioTracker
+pip install -r requirements.txt
+```
+Set RPC endpoints in `.env` (example):
+```
+ETH_RPC=https://mainnet.infura.io/v3/YOUR_INFURA_KEY
+BSC_RPC=https://bsc-dataseed.binance.org/
+```
 
-Install backend dependencies:
+## Usage
+```bash
+python portfolio_tracker.py --wallet <wallet_address>
+```
 
-cd backend
-npm install
+## Sample Output
+```json
+{
+  "wallet": "0x...",
+  "portfolio": {
+    "ETH": 1.2,
+    "USDC": 500.0
+  },
+  "totalValueUSD": 2300.0
+}
+```
 
-Install frontend dependencies:
-
-cd ../frontend
-npm install
-
-Set up environment variables:
-
-
-cp .env.example .env
-# Add your Infura API key and other configurations
-
-Run the application:
-
-
-# Terminal 1 - Backend
-cd backend
-npm run dev
-
-# Terminal 2 - Frontend
-cd frontend
-npm run dev
-
-
+## License
+MIT
